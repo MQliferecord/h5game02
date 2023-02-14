@@ -8,10 +8,12 @@ class Game{
     direction:string = ''
     timer:number = 300
     isLive:Boolean = true 
+    dialog:HTMLDialogElement
     constructor(){
         this.snake = new Snake()
         this.food = new Food()
         this.scorePanel = new ScorePanel()
+        this.dialog = document.getElementsByTagName('dialog')[0]
         this.init()
     }
     init(){
@@ -56,8 +58,15 @@ class Game{
             this.snake.X = X
             this.snake.Y = Y
         }catch(e:any){
-            alert(e.message+"GAME OVER")
+            let dialogtext = this.dialog.getElementsByTagName('h2')[0]
+            dialogtext.innerText = e.message+"GAME OVER"
+            this.dialog.showModal();
             this.isLive = false
+            let restart = this.dialog.getElementsByTagName('button')[0]
+            restart.addEventListener("click",()=>{
+                document.location.reload()
+                this.dialog.close()
+            })
         }
         this.timer = 300 - (this.scorePanel.level - 1) * 30
         //开启轮询

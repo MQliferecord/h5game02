@@ -55,4 +55,20 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+#dialog{
+    margin:130px auto;
+    width: 200px;
+    height: 150px;
+    border:2px solid black;
+    background-color: #ccc;
+    border-radius:10px;
+    font-size: small;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#dialog::backdrop{
+    background-color: rgba(126,201,236,0.6);
+}
 

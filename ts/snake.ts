@@ -64,7 +64,7 @@ class Snake{
         for(let i = 1;i<this.bodies.length;i++){
             let bd = this.bodies[i] as HTMLElement
             if(this.X ===  bd.offsetLeft&& this.Y === bd.offsetTop){
-                throw new Error("撞到自己了")
+                throw new Error("撞到自己")
             }
         }
     }
