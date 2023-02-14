@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="main">
+        <div id="stage">
+            <div id="snake">
+                <div id="bd"></div>
+            </div>
+            <div id="food">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="score-panel">
+            <div id="score">
+                SCORE:<span id="scoreSpan">0</span>
+            </div>
+            <div id="level">
+                LEVEL:<span id="levelSpan">1</span>
+            </div>
+        </div>
+    </div>
+    <script src="ts/food.js"></script>
+    <script src="ts/game.js"></script>
+    <script src="ts/scorePanel.js"></script>
+    <script src="ts/snake.js"></script>
+</body>
+</html>
